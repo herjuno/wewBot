@@ -1,0 +1,9 @@
+{
+	"botName": "wewBot",
+	"botDescription": "its a fucking bot. k?",
+	"gameName": "",
+	"mainServer": {
+		"enabled": false,
+		"inviteURL": ""
+	}
+}
