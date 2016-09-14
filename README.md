@@ -13,7 +13,8 @@ This is a bot that can be public but only if given credit because there is a lic
 	},
 	"publicBot": true
 }
-``` We have this.
+``` 
+We have this.
 Put your token in `token`, Choose your desired prefix in `prefix`, Put your User ID in `ownerID`, If you want to make it a public bot where people can add it using `[prefix]invite`, enable `publicBot`.
 
 In the descriptions area,
