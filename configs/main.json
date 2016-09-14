@@ -1,0 +1,10 @@
+{
+	"token": "",
+	"prefix": ">>",
+	"ownerID": "",
+	"channelIDs": {
+		"enabled": false,
+		"welcomeID": ""
+	},
+	"publicBot": true
+}
