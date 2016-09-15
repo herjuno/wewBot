@@ -73,6 +73,18 @@ Currently in: **${bot.guilds.size}** servers!
 	        bot.createMessage(channelID, "You are not the owner of this bot!")
 	    }
 	}
+	if (vanity.autoResponses == true) {
+		if (message.startsWith("ayy")) {
+			bot.createMessage(channelID, "lmao")
+		}
+		if (message.startsWith("(╯°□°）╯︵ ┻━┻")) {
+			bot.createMessage(channelID, "┬─┬﻿ ノ( ゜w゜ノ)")
+		} else if (message.startsWith("┬─┬﻿ ノ( ゜-゜ノ)")) {
+			bot.createMessage(channelID, "(╯°^°）╯︵ ┻━┻")
+		}
+	} else if (vanity.autoResponses == false) {
+		// ¯\_(ツ)_/¯
+	}
 });
 
 bot.on("ready", () => {
