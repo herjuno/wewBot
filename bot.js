@@ -38,6 +38,7 @@ bot.on("messageCreate", (msg) => {
 			sendMessage(`Heres an invite link to my official server! **${desc.mainServer.inviteURL}**`)
 		}
 	}
+
 	if (main.publicBot == true) {
 		if (message.startsWith(`${prefix}invite`)) {
 			sendMessage(`Invite me to your server! https://discordapp.com/oauth2/authorize?&client_id=${bot.user.id}&scope=bot`)
@@ -57,7 +58,21 @@ Currently in: **${bot.guilds.size}** servers!
 	if (message.startsWith(`${prefix}help`)) {
 		sendMessage(`help:\n\n${"```\n"}${prefix}ping - Sends a message to test if the bot is up\n${prefix}info - Bot info\n${prefix}invite - Displays an invite for me!\n${prefix}server - Displays an invite to my official server!${"\n```"}`)
 	}
-
+	if (msg.author.id === ownerParser) {
+	    if (message.startsWith(`${prefix}eval `)) {
+	        var args = message.split(`${prefix}eval `).join("");
+	        try {
+	            var evald = eval(args);
+	            bot.createMessage(channelID, `${"```js\n"}input: ${args}\n\noutput: ${evald}\n${"```"}`)
+	        } catch (e) {
+	            bot.createMessage(channelID, `${"```js\n"}input: ${args}\n\noutput: ${e}${"```"}`)
+	        }
+	    }
+	} else {
+	    if (message.startsWith(`${prefix}eval`)) {
+	        bot.createMessage(channelID, "You are not the owner of this bot!")
+	    }
+	}
 });
 
 bot.on("ready", () => {
